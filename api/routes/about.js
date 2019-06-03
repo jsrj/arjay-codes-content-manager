@@ -5,10 +5,7 @@ const router = express.Router()
 const BioPage = require('../db/models/pages/about/AboutMePage')
 
 router.get('/', (req, res, next) => {
-  let bioPage;
-  BioPage.find().exec().then(page => bioPage = page);
-
-  console.log(bioPage);
+  res.json({message: 'hello'});
 });
 
 module.exports = router;
