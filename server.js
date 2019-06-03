@@ -28,12 +28,10 @@ app.use(function (req, res, next) {
 });
 
 // Import routes
-const login = require('./api/routes/login')
-const register = require('./api/routes/register')
+const about = require('./api/routes/about');
 
 // Use routes
-app.use('/login', login)
-app.use('/register', register)
+app.use('/about', about);
 
 // Listen for the server at a port.
 app.listen(process.env.PORT || 8000, (err) => {
